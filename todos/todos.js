@@ -66,5 +66,5 @@ deleteButton.addEventListener('click', async() => {
     await deleteAllTodos();
 
     // then refetch and display the updated list of todos
-    displayTodos;
+    displayTodos();
 });
