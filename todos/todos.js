@@ -38,7 +38,7 @@ async function displayTodos() {
         todosEl.append(newTodo);
 
     // be sure to give each todo an event listener
-        todo.addEventListener('click', () => {
+        addEventListener('click', () => {
             // on click, complete that todo 
             completeTodo(todo.id);
         });
@@ -61,6 +61,8 @@ logoutButton.addEventListener('click', () => {
 
 deleteButton.addEventListener('click', async() => {
     // delete all todos
+    await deleteAllTodos();
 
     // then refetch and display the updated list of todos
+    displayTodos;
 });
