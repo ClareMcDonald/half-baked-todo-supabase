@@ -38,9 +38,9 @@ async function displayTodos() {
         todosEl.append(newTodo);
 
     // be sure to give each todo an event listener
-        newTodo.addEventListener('click', () => {
+        newTodo.addEventListener('click', async() => {
             // on click, complete that todo 
-            completeTodo(todo.id);
+            await completeTodo(todo.id);
             displayTodos();
         });
         

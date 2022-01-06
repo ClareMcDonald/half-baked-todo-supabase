@@ -35,7 +35,7 @@ export async function completeTodo(id) {
     const response = await client
         .from('todos')
         .update({ complete: true })
-        .match({ user_id: id });
+        .match({ id: id });
     
     return checkError(response);    
 }
