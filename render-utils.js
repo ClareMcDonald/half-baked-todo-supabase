@@ -3,7 +3,7 @@ export function renderTodo(todo) {
     const todoDiv = document.createElement('div');
     const todoEl = document.createElement('p');
     // depending on whether the todo is complete, give the div the appropriate css class ('complete' or 'incomplete')
-    if (todo.comlete) {
+    if (todo.complete) {
         todoDiv.classList.add('complete');
     } else {
         todoDiv.classList.add('incomplete');
@@ -16,7 +16,7 @@ export function renderTodo(todo) {
     todoEl.textContent = todo.todo;
 
     // append stuff
-    todoEl.append(todo);
+    //todoEl.append(todo);
     todoDiv.append(todoEl);
 
     // return the div

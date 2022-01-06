@@ -34,15 +34,17 @@ async function displayTodos() {
 
     // display the list of todos
     for (let todo of todos) {
-        const newTodo = renderTodo(todo.todo);
+        const newTodo = renderTodo(todo);
         todosEl.append(newTodo);
 
     // be sure to give each todo an event listener
-        addEventListener('click', () => {
+        newTodo.addEventListener('click', () => {
             // on click, complete that todo 
             completeTodo(todo.id);
+            displayTodos();
         });
         
+
     }
 
 
