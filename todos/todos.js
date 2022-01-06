@@ -36,11 +36,16 @@ async function displayTodos() {
     for (let todo of todos) {
         const newTodo = renderTodo(todo.todo);
         todosEl.append(newTodo);
-    }
 
     // be sure to give each todo an event listener
+        todo.addEventListener('click', () => {
+            // on click, complete that todo 
+            completeTodo(todo.id);
+        });
+        
+    }
 
-    // on click, complete that todo
+
 }
 
 // add an on load listener that fetches and displays todos on load
